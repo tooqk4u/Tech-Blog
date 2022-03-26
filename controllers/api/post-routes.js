@@ -32,7 +32,6 @@ router.get("/", (req, res) => {
     });
 });
 
-
 router.get("/:id", (req, res) => {
     Post.findOne({
         where: {
@@ -57,10 +56,10 @@ router.get("/:id", (req, res) => {
         },
         {
           model: Comment,
-          attributes: ['id', 'comment_body', 'post_id', 'user_id', 'created_at'],
+          attributes: ["id", "comment_body", "post_id", "user_id", "created_at"],
           include: {
               model: User,
-              attributes: ['username']
+              attributes: ["username"]
           }
       },
     ],
@@ -72,8 +71,6 @@ router.get("/:id", (req, res) => {
         res.status(500).json(err);
       });
   });
-
-
 
 router.post("/", (req, res) => {
   Post.create({
@@ -88,6 +85,48 @@ router.post("/", (req, res) => {
     });
 });
 
+router.put("/:id", (req, res) => {
+  Post.update(
+    {
+      post_title: req.body.post_title,
+      post_body: req.body.post_body,
+    },
+    {
+      where: {
+        id: req.params.id,
+      },
+    }
+  )
+    .then((dbPostData) => {
+      if (!dbPostData) {
+        res.status(404).json({ message: "No post found with this id." });
+        return;
+      }
+      res.json(dbPostData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
+router.delete("/:id", (req, res) => {
+  Post.destroy({
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((dbPostData) => {
+      if (!dbPostData) {
+        res.status(404).json({ message: "No post found with this id" });
+        return;
+      }
+      res.json(dbPostData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 module.exports = router;
