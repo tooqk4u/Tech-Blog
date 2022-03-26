@@ -15,7 +15,6 @@ router.get('/', (req, res) => {
     });
 });
 
-
 router.get('/:id', (req, res) => {
     User.findOne({
         attributes: { exclude: ['password'] },
@@ -31,7 +30,6 @@ router.get('/:id', (req, res) => {
     });
 })
 
-
 router.post('/', (req, res) => {
     User.create({
         username: req.body.username,
@@ -46,7 +44,6 @@ router.post('/', (req, res) => {
         res.status(500).json(err);
     });
 });
-
 
 
 module.exports = router; 
