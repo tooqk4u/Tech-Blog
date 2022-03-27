@@ -1,13 +1,13 @@
 <a href="/post/{{id}}">
-    <article class="post">
-        <div class="post-header">
-            <span class="post-title">{{post_title}}</span><span class="author-date">Posted by {{user.username}} on {{format_date created_at}}</span>
+    <article class="box">
+        <div class="box-header highlight">
+            <span class="box-title">{{post_title}}</span><span class="author-date">Posted by {{user.username}} on {{format_date created_at}}</span>
         </div>
         <div class="post-body">
             <p>{{post_body}}</p>
         </div>
-        <div class="post-footer">
-            <span></span><span>{{comment_count}} {{format_plural "comment" comments}}</span>
+        <div class="post-footer highlight">
+            <span>{{comment_count}} {{format_plural "comment" comments}}</span>
         </div>
     </article>
 </a> 

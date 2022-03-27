@@ -33,4 +33,9 @@ router.get("/", (req, res) => {
       res.status(500).json(err);
     });
 });
+
+router.get('/login', (req, res) => {
+  res.render('login');
+})
+
 module.exports = router;
