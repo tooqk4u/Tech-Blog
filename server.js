@@ -34,7 +34,7 @@ app.use(session(sess));
 
 //middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 // static
 app.use(express.static(path.join(__dirname, "public")));
