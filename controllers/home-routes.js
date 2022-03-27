@@ -35,7 +35,23 @@ router.get("/", (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  res.render('login');
-})
+  res.render('login', {
+    formTitle: 'Login',
+    elementId: 'login-form',
+    buttonText: 'Login!',
+    linkText: 'Sign up instead',
+    link: '/signup'
+  });
+});
+
+router.get('/signup', (req, res) => {
+  res.render('sign-up', {
+    formTitle: 'Sign up',
+    elementId: 'signup-form',
+    buttonText: 'Sign up!',
+    linkText: 'Login instead',
+    link: '/login'
+  });
+});
 
 module.exports = router;

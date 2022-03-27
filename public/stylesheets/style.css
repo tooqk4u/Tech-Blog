@@ -29,6 +29,10 @@ a {
   color: var(--secondary-color);
 }
 
+.hide{
+  display: none;
+}
+
 /* Header Styles */
 header {
   background-color: var(--primary-color);
@@ -98,6 +102,28 @@ ul {
   font-size: 1.75em;
 }
 
+.btn {
+  background-color: #666666;
+  color: var(--secondary-color);
+  border: none;
+  font-size: 1.5em;
+  padding: .75em;
+  border-radius: .25em;
+  width: 97%;
+  margin: .8em .8em 0 .8em;
+
+}
+
+/*Login Styles*/
+#login-toggle {
+  color: #0809fe;
+  font-size: 1.5em;
+  margin: .5em .8em 1.5em .8em;
+  width: 15rem;
+  height: 2rem;
+  padding: 0 1em 1em 0;
+}
+
 /*Post Styles*/
 .post-footer{
   background-color: var(--primary-color);
@@ -134,8 +160,21 @@ label {
   outline: none;
 }
 
+/*Login Styles*/
+#login-toggle {
+  color: #0809fe;
+  font-size: 1.5em;
+  margin: .5em .8em 1.5em .8em;
+  width: 15rem;
+  height: 2rem;
+  padding: 0 1em 1em 0;
+}
 @media screen and (max-width: 768px){
   .text-input {
+    width: 95%;
+  }
+
+  .btn {
     width: 95%;
   }
 }
@@ -143,5 +182,9 @@ label {
 @media screen and (max-width: 540px){
   .text-input {
     width: 90%;
+  }
+  .btn {
+    width: 90%;
+    margin: .8em .5em 0 .5em;
   }
 } 
