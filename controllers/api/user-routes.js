@@ -102,12 +102,13 @@ router.post("/login", (req, res) => {
       req.session.loggedIn = true;
       res.json({ user: dbUserData, message: "You are now logged in!" });
     })
+  })
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
-});
 })
+
 
 router.post("/logout", withAuth, (req, res) => {
   if (req.session.loggedIn) {

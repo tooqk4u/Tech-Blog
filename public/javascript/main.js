@@ -36,6 +36,4 @@ document.onmousemove = function () {
     resetTimer();
 };
 
-document.onkeypress = function () {
-  resetTimer();
-}
+
