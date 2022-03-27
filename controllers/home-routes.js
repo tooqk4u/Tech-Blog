@@ -3,16 +3,34 @@ const sequelize = require("../config/connection");
 const { Post, User, Comment } = require("../models");
 
 router.get("/", (req, res) => {
-  res.render("homepage", {
-    id: 1,
-    post_title: "This is a new post!",
-    post_body:
-      "This new post is about Javascript. Javascript can be considered the function portion of a website.",
-    created_at: new Date(),
-    comments: 30,
-    user: {
-      username: "test_user",
-    },
-  });
+  Post.findAll({
+    attributes: [
+      "id",
+      "post_title",
+      "post_body",
+      "created_at",
+      [
+        sequelize.literal(
+          "(SELECT COUNT(*) FROM comment WHERE post.id = comment.post_id)"
+        ),
+        "comment_count",
+      ],
+    ],
+    include: [
+      {
+        model: User,
+        attributes: ["username"],
+      },
+    ],
+  })
+    .then((dbPostData) => {
+      console.log(dbPostData[0].get({ plain: true }))
+      const posts = dbPostData.map(post => post.get({ plain: true }));
+      res.render("homepage", { posts });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 module.exports = router;
