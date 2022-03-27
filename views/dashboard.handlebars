@@ -1,6 +1,6 @@
 <ul>
     {{#each posts as |post|}}
-    <a href="/post/{{post.id}}">
+    <a href="/dashboard/edit-post/{{post.id}}">
     <li class="dashboard-post">
         <div class="post-info-wrapper">
             <span class="box-title">{{post.post_title}}</span><span class="post-date">{{format_date created_at}}</span>

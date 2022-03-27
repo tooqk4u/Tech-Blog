@@ -1,12 +1,18 @@
 <div class="box">
     <div class="box-header post-info-wrapper">
-        <span class="box-title">Create New Post</span>
+         <span class="box-title">Edit Post</span>>
     </div>
-    <form class="post-body">
+    <div class="post-body" id="edit-post-form">
         <label for="title-input" class="block">Title</label>
-        <input type="text" name="title-input" id="title-input" class="text-input block input-border">
+        <input type="text" name="title-input" id="title-input" class="text-input block input-border" value="{{post.post_title}}">
         <label for="body-input" class="block">Content</label>
-        <input type="text" name="body-input" id="body-input" class="text-input block input-border">
-        <button class="btn" id="create-post-btn">Create</button>
-    </form>
-</div> 
+        <textarea name="body-input" id="body-input" class="text-input block input-border">{{post.post_body}}</textarea>
+        <button class="btn" id="update-post-btn">Update Post</button>
+        <button class="btn" id="delete-post-btn">Delete Post</button>
+    </div>
+</div>
+
+{{#if loggedIn}}
+<script src="/javascript/update-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+{{/if}} 
