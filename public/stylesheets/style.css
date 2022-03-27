@@ -154,6 +154,7 @@ label {
   font-size: 1.75em;
   margin: 0 auto;
   box-sizing: inherit;
+  padding-left: .8em;
 }
 
 .text-input:focus {
@@ -169,6 +170,12 @@ label {
   height: 2rem;
   padding: 0 1em 1em 0;
 }
+
+/*Dashboard Styles*/
+.dashboard-post {
+  background-color: #666666;
+}
+
 @media screen and (max-width: 768px){
   .text-input {
     width: 95%;
