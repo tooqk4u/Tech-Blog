@@ -34,10 +34,8 @@ startTimer();
 
 document.onmousemove = function () {
     resetTimer();
+};
+
+document.onkeypress = function () {
+  resetTimer();
 }
-
-document.addEventListener('scroll', function() {
-    resetTimer();
-})
-
-
