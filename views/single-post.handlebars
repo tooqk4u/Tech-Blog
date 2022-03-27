@@ -1,0 +1,12 @@
+
+{{> post-info post}}
+{{> comment-form}}
+<ul>
+     {{#each comments as |comment|}}
+    <li>
+        {{> comments comment}}
+    </li>
+    {{/each}}
+</ul>
+
+<script src="/javascript/single-post.js"></script> 

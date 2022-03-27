@@ -2,6 +2,7 @@
     <p class="display-message">No posts yet. Sign up and make the first post on The Tech Blog!</p>
 {{/unless}}
 <ul>
+    {{> post-info post}}
     {{#each posts as |post|}}
     <li>
         <a href="/post/{{post.id}}">
