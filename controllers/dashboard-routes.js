@@ -32,7 +32,7 @@ router.get("/", withAuth, (req, res) => {
 });
 
 router.get('/new-post', withAuth, (req, res) => {
-  res.render('new-post');
+  res.render('new-post', { loggedIn: req.session.loggedIn });
 })
 
 module.exports = router; 

@@ -84,6 +84,7 @@ h1 a {
 /*Main Styles*/
 main {
   padding: 1.5rem 2.75rem 2.75rem 2.75rem;
+  margin-bottom: 5rem;
 }
 
 ul {
@@ -179,6 +180,15 @@ label {
   outline: none;
 }
 
+.input-border {
+  border: solid 4px rgba(65, 128, 232, .75);
+  border-radius: .1em;
+}
+
+#body-input {
+  height: 4em;
+}
+
 /*Login Styles*/
 #login-toggle {
   color: #0809fe;
@@ -215,12 +225,20 @@ label {
   bottom: 0;
   width: 100%;
   background-color: var(--secondary-color);
-  padding: 2em 0;
-  border-top: solid 2px var(--primary-color);
-  box-shadow: 0px -4px 3px rgba(35, 16, 16, 0.5);
+  
 }
 
-.new-post-btn {
+.sticky-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: solid 2px var(--primary-color);
+  box-shadow: 0px -4px 3px rgba(35, 16, 16, 0.5);
+  padding: 2em 0;
+}
+
+#new-post-btn {
   background-color: var(--primary-color);
   color:  #e1dfef;
   border: none;
