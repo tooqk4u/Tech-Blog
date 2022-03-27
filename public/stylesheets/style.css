@@ -33,6 +33,16 @@ a {
   display: none;
 }
 
+.display-message {
+  font-size: 1.5em;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+button:focus {
+  outline:0;
+}
+
 /* Header Styles */
 header {
   background-color: var(--primary-color);
@@ -197,6 +207,27 @@ label {
   margin-top: .5em;
 }
 
+.new-post-footer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  padding: 2em 0;
+  border-top: solid 2px var(--primary-color);
+  box-shadow: 0px -4px 3px rgba(35, 16, 16, 0.5);
+}
+
+.new-post-btn {
+  background-color: var(--primary-color);
+  color:  #e1dfef;
+  border: none;
+  border-radius: .4em;
+  font-size: 1.75em;
+  padding: .5em .8em;
+}
 
 @media screen and (max-width: 768px){
   .text-input {

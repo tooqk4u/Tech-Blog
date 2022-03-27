@@ -31,4 +31,8 @@ router.get("/", withAuth, (req, res) => {
   })
 });
 
+router.get('/new-post', withAuth, (req, res) => {
+  res.render('new-post');
+})
+
 module.exports = router; 
