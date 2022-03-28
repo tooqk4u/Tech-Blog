@@ -14,7 +14,7 @@ A CMS style blog for publishing articles, blog posts, thoughts and opinions. It 
   
 ## Table of Contents 
 
-* [Installation](#installation)
+
 * [Usage](#usage)
 * [Built](#built)
 * [Acknowledgements](#acknowledgements)
@@ -25,13 +25,6 @@ A CMS style blog for publishing articles, blog posts, thoughts and opinions. It 
 ---
 ---
 
-## Installation
-
-
-undefined
-
----
----
 
 ## Usage
 
@@ -49,7 +42,7 @@ https://opensource.org/licenses/MIT
 ---
 ---
 
-## Built with:
+## Built
 
 ![node.js](https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?&style=for-the-badge&logo=mysql&logoColor=white)
@@ -61,7 +54,7 @@ https://opensource.org/licenses/MIT
 ---
 ---
 
-## Acknowlendgements
+## Acknowledgements
 
 - [Tech badges by Ileriayo](https://github.com/Ileriayo/markdown-badges)
 - [Express.js](https://www.npmjs.com/package/express)
@@ -87,7 +80,7 @@ GitHub: [tooqk4u](https://github.com/tooqk4u).
 
 ## Credits 
  
-undefined
+Shelley Soucie
 
 ---
 ---
