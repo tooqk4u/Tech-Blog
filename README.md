@@ -3,7 +3,14 @@
 
 ---
 ## Link
+
+Repository
+
 https://github.com/tooqk4u/Tech-Blog
+
+Heroku website
+
+https://sleepy-island-29561.herokuapp.com/
 
 
 ## Description 
