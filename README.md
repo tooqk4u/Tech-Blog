@@ -17,6 +17,22 @@ https://sleepy-island-29561.herokuapp.com/
   
 A CMS style blog for publishing articles, blog posts, thoughts and opinions. It uses handlebars.js as the templating language, Sequelize as the ORM, and express-session npm package for authentication.Once logged in, the user can create new posts, update and delete posts. Visitors can just view posted blogs, but cannot edit them. The blog was created through backend servers and follows the Models Views Controllers (MVC) architecture.
 
+HOMESCREEN - NOT LOGGED IN
+![](./public/images/Capture-homescreen.PNG)
+
+
+HOMESCREEN LOGGED IN DASHBOARD
+![](./public/images/Capture-loggedin-dashboard.PNG)
+
+LOG IN SCREEN
+![](./public/images/Capture-login.PNG)
+
+SIGN UP SCREEN
+![](./public/images/Capture-signup.PNG)
+
+EDIT AND DELETE 
+![](./public/images/Capture-edit-delete.PNG)
+
 ---
   
 ## Table of Contents 
